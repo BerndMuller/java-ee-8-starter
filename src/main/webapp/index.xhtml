@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+		#{jsf23Activator.versionMessage()}
+		<br/><br/><br/>
+		<h:dataTable var="entity" value="#{entityUser.entities()}">
+			<h:column>
+				#{entity}
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</body> 
+</html>
