@@ -21,7 +21,7 @@ and deploy on your app server
 
 Java EE 8 Application Server.
 
-Tested with Payara 5.183 and WildFly 14. 
+Tested with Payara 5.183+ and WildFly 14+. 
 
 
 ## License
