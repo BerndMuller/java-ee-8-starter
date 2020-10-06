@@ -5,9 +5,10 @@ Simple Java EE 8 Starter Application.
 Activates
 
 * JAX-RS by JaxRxActivator class
-* JSF 2.3 by faces-config.xml and Jsf23Activator
+* JSF 2.3 by faces-config.xml and version by Jsf23Activator
 * CDI by beans.xml
-* JPA by persistence.xml (JPA, EclipseLink and Hibernate prepared)
+* JPA by persistence.xml
+* BV because JSF and JPA is used
 
 ## Getting Started
 
@@ -21,7 +22,7 @@ and deploy on your app server
 
 Java EE 8 Application Server.
 
-Tested with Payara 5.183+ and WildFly 14+. 
+Tested WildFly 20.
 
 
 ## License

@@ -7,7 +7,7 @@
 	<display-name>Java EE 8 Starter</display-name>
 
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>message.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<context-param>

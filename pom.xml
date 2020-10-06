@@ -7,13 +7,11 @@
 	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>Java EE 8 Starter</name>
-	<description>Simple Java EE 8 Project activating JSF, JAX-RS, CDI and JPA</description>
+	<description>Simple Java EE 8 Project activating JSF, JAX-RS, CDI, JPA and BV</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
 
@@ -25,18 +23,30 @@
 			<version>8.0</version>
 			<scope>provided</scope>
 		</dependency>
-<!-- 
-		<dependency>
-			<groupId>jakarta.platform</groupId>
-			<artifactId>jakarta.jakartaee-api</artifactId>
-			<version>8.0.0</version>
-			<scope>provided</scope>
-		</dependency>
- -->
+		<!-- <dependency> <groupId>jakarta.platform</groupId> <artifactId>jakarta.jakartaee-api</artifactId> 
+			<version>8.0.0</version> <scope>provided</scope> </dependency> -->
 	</dependencies>
 
 	<build>
 		<finalName>java-ee-8-starter</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>14</release>
+
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
+
+		</plugins>
 	</build>
 
 </project>
+
