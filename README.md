@@ -37,7 +37,7 @@ Payara is restricted to Java 11.
 * The database is the built in H2 database (WildFly and Payara) via JPA's default datasource (``persistence.xml`` empty)
 * An HTTP GET request is directed to ``/message.xhtml`` which shows the JSF version and the last message
 * You can insert new message in ``/message.xhtml`` 
-* All messages are available via REST at http://localhost:8080/java-ee-8-starter/resources/messages delivered by ``MessageResource``
+* All messages are available via HTTP GET at ``http://localhost:8080/java-ee-8-starter/resources/messages`` delivered by ``MessageResource``
 
 
 ## License
