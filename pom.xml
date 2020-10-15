@@ -7,7 +7,7 @@
 	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>Java EE 8 Starter</name>
-	<description>Simple Java EE 8 Project activating JSF, JAX-RS, CDI, JPA and BV</description>
+	<description>Simple Java EE 8 Project activating JSF, JAX-RS, CDI, JPA, EJB and BV</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -9,6 +9,7 @@ It activates und uses
 * CDI by beans.xml
 * JPA by persistence.xml
 * BV because JSF and JPA is used
+* EJB 
 
 ## Getting Started
 
