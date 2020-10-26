@@ -28,8 +28,8 @@ cp target/java-ee-8-starter.war <WILDFLY>/standalone/deployments/
 
 ## Prerequisites
 
-Java EE 8 Application Server. Tested with WildFly 20 and Payara 5.2020.4.
-Payara is restricted to Java 11.
+Java EE 8 Application Server. Tested on WildFly 21 with Java 15 and Payara 5.2020.4 with
+Java 11 because Payara is restricted to Java 11.
 
 
 ## Brief Description
@@ -39,6 +39,37 @@ Payara is restricted to Java 11.
 * An HTTP GET request is directed to ``/message.xhtml`` which shows the JSF version and the last message
 * You can insert new message in ``/message.xhtml`` 
 * All messages are available via HTTP GET at ``http://localhost:8080/java-ee-8-starter/resources/messages`` delivered by ``MessageResource``
+
+
+## WildFly bootable Jar
+
+After the retirement of 
+[WildFly Swarm](https://www.wildfly.org/news/2015/05/05/WildFly-Swarm-Released/) and
+[Thorntail](https://thorntail.io/) WildFly 21 is now capable to package itself and the application
+into a Jar file via [WildFly Jar Maven Plugin](https://docs.wildfly.org/bootablejar/) and
+[Galleon Layers](https://docs.wildfly.org/galleon/). We do not use a profile but a separate POM
+to handle this.
+
+Build the Jar:
+
+```
+mvn clean package -f pom-bootable.xml
+```
+
+creates ``jave-ee-8-starter-bootable.jar`` in the target folder which contains WildFly base as well as
+all used layers. 
+
+And run it:
+
+```
+java -jar target/jave-ee-8-starter-bootable.jar
+```
+
+The deployment name disappears. Point your browser to 
+``http://localhost:8080`` to use the UI. The REST endpoint is abailable at
+``http://localhost:8080/resources/messages``.
+
+
 
 
 ## License
