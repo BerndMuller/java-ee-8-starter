@@ -56,13 +56,13 @@ Build the Jar:
 mvn clean package -f pom-bootable.xml
 ```
 
-creates ``jave-ee-8-starter-bootable.jar`` in the target folder which contains WildFly base as well as
+creates ``java-ee-8-starter-bootable.jar`` in the target folder which contains WildFly base as well as
 all used layers. 
 
 And run it:
 
 ```
-java -jar target/jave-ee-8-starter-bootable.jar
+java -jar target/java-ee-8-starter-bootable.jar
 ```
 
 The deployment name disappears. Point your browser to 
