@@ -41,7 +41,7 @@ Java 11 because Payara is restricted to Java 11.
 * All messages are available via HTTP GET at ``http://localhost:8080/java-ee-8-starter/resources/messages`` delivered by ``MessageResource``
 
 
-## WildFly bootable Jar
+## WildFly Bootable Jar
 
 After the retirement of 
 [WildFly Swarm](https://www.wildfly.org/news/2015/05/05/WildFly-Swarm-Released/) and
@@ -70,6 +70,16 @@ The deployment name disappears. Point your browser to
 ``http://localhost:8080/resources/messages``.
 
 
+## WildFly Bootable Jar Dev Mode
+
+There is also a developer mode with hot deployment. Simply run
+
+```
+mvn wildfly-jar:dev-watch -f pom-bootable.xml
+```
+
+and the Maven plugin will detect code changes of classes, JSF pages and resources and will redeploy
+the application automatically. To stop dev mode type CTRL-C.
 
 
 ## License
